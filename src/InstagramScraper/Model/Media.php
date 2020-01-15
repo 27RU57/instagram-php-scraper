@@ -572,12 +572,6 @@ class Media extends AbstractModel
                     }
                 }
                 break;
-            case 'location':
-                $this->locationId = $arr[$prop]['id'];
-                $this->locationName = $arr[$prop]['name'];
-                $this->locationSlug = $arr[$prop]['slug'];
-                $this->locationAddressJson = isset($arr[$prop]['address_json']) ? $arr[$prop]['address_json'] : null;
-                break;
             case 'user':
                 $this->owner = Account::create($arr[$prop]);
                 break;
